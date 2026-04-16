@@ -13,10 +13,11 @@ h1, h2 {
 
 h2 {
     margin-bottom: 15px;
+    font-size: 1.8rem;
 }
 
 p {
-    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
 /* Reset */
@@ -40,7 +41,13 @@ body {
     background: #f9fafb;
     padding: 20px;
     border-radius: 12px;
-    border-left: 5px solid var(--primary);
+    border-left: 5px solid #1e3a8a;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* Header */
@@ -48,6 +55,7 @@ header {
     position: sticky;
     top: 0;
     background: #434343;
+    padding: 10px 0;
     z-index: 1000;
 }
 
@@ -59,7 +67,7 @@ nav {
 
 nav a {
     color: white;
-    text-decoration: none;
+    margin: 0 15px;
     font-weight: 500;
     transition: 0.2s;
 }
@@ -70,19 +78,16 @@ nav a:hover {
 
 .cta-btn {
     display: inline-block;
-    margin: 20px 10px;
-    padding: 12px 24px;
-    background: var(--primary);
-    color: white;
-    text-decoration: none;
+    margin: 20px 10px 0 0;
+    padding: 12px 22px;
     border-radius: 8px;
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
 .cta-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .cta-btn.secondary {
@@ -93,8 +98,8 @@ nav a:hover {
 
 /* Sections */
 section {
-    margin: 40px auto;
-    padding: 30px;
+    margin: 60px auto;
+    padding: 40px;
     background: var(--white);
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.05);
@@ -133,13 +138,14 @@ html {
 #skills ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
     list-style: none;
+    padding: 0;
 }
 
 #skills li {
     background: #e0e7ff;
-    padding: 8px 14px;
+    padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
 }
@@ -156,7 +162,7 @@ html {
     text-align: center;
     padding: 80px 20px;
     background: linear-gradient(135deg, #e0f2fe, #ffffff);
-    border-radius: 16px;
+    border-radius: 20px;
 }
 
 #home h1 {
@@ -204,5 +210,50 @@ footer {
     margin-top: 20px;
 }
 
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
 
+.hero-text {
+    flex: 1;
+}
 
+.hero-text h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid white;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #6b7280;
+}
+
+.logo {
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+}
